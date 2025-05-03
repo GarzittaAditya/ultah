@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Ulang Tahun, Cantikkk!</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
+      color: #333;
+      text-align: center;
+      padding: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      animation: popUp 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff4081;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 15px 0;
+    }
+
+    .emoji {
+      font-size: 2em;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popUp {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    #playBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      background: #ff69b4;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    #playBtn:hover {
+      background: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="emoji">🎂💖🎉</div>
+    <h1>Selamat Ulang Tahun, Cantikkk!</h1>
+    <p>Semoga selalu diberi kesehatan, rezeki yang berlimpah dan halal.</p>
+    <p>Semoga yang ingin diwujudkan bisa terwujud</p>
+    <p>dan selalu dimudahkan dalam segala hal apapun yaaaa, aamiin.</p>
+    <p>Itu aja sihhh, pesan dari aku mah jaga kesehatan, jaga pola makan nya, jangan banyakin begadang, dahhh ahh gitu aja. Sekali Lagi aku ucapin
+      Selamat Ulang Tahun!
+    </p>
+    <p><strong>Pokoknya...</strong> Funlink tetep aku yang jago. 😏💕</p>
+    <p class="emoji">🎈🥳💘</p>
+    <button id="playBtn">Di Klik Yaaa 🎶</button>
+  </div>
+
+  <!-- Musik Ulang Tahun -->
+  <audio id="bgm" src="ultah.mp3" preload="auto"></audio>
+
+  <script>
+    const btn = document.getElementById('playBtn');
+    const bgm = document.getElementById('bgm');
+
+    btn.addEventListener('click', () => {
+      bgm.play();
+      btn.textContent = "Dikasih Lagu Biar Keliatan Pro Hehehe 🎵";
+      btn.disabled = true;
+    });
+  </script>
+</body>
+</html>
